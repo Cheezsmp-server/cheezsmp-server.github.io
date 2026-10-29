@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheezSMP — Сервер Minecraft</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        body {
+            background: linear-gradient(135deg, #110e20 0%, #06040a 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+        .box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 20px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 {
+            font-size: 2.7rem;
+            color: #ffaa00;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(255,170,0,0.4);
+        }
+        p { color: #a0a0a0; font-size: 1.1rem; margin-bottom: 30px; }
+        .ip-block {
+            background: rgba(0,0,0,0.4);
+            border: 2px dashed #00ffcc;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            color: #00ffcc;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .ip-block:active {
+            transform: scale(0.98);
+            background: rgba(0, 255, 204, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>CheezSMP</h1>
+        <p>Приватный сервер выживания Minecraft</p>
+        
+        <div class="ip-block" onclick="copyIp()">Скопировать IP сервера</div>
+    </div>
+
+    <script>
+        function copyIp() {
+            navigator.clipboard.writeText('Cheezsmp.aternos.me');
+            alert('IP адрес Cheezsmp.aternos.me скопирован!');
+        }
+    </script>
+
+</body>
+</html>
